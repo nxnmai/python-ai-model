@@ -1,0 +1,14 @@
+{
+  "career_profiles": {
+    "software_eng": "Software Engineer (Kỹ sư phần mềm nói chung)",
+    "qa_qc_eng": "QA/QC Engineer (Kiểm thử & Đảm bảo chất lượng)",
+    "backend_dev": "Backend Developer (Lập trình viên Backend)",
+    "frontend_dev": "Frontend Developer (Lập trình viên Frontend)",
+    "tester": "Tester (Nhân viên kiểm thử)",
+    "pm_ba_po": "Project Manager/Business Analyst/Product Owner",
+    "cloud_devops": "Cloud/DevOps/IoT/Security Engineer",
+    "solutions_architect": "Solutions Architect (Kiến trúc sư giải pháp)",
+    "ai_ml_eng": "AI/ML Engineer (Kỹ sư Trí tuệ nhân tạo/Học máy)",
+    "data_science": "Data Science/Analysis/Engineer"
+  }
+}
