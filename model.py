@@ -137,26 +137,28 @@ if __name__ == "__main__":
 
     if model.questions and model.career_profiles:
         print("\nTải dữ liệu thành công!")
-        
-        # Lấy ID câu hỏi có sẵn từ dữ liệu đã tải để mô phỏng
-        available_question_ids = [q['id'] for q in model.questions]
-        mock_user_answers = {}
-        if len(available_question_ids) >= 3:
-             mock_user_answers = {
-                available_question_ids[0]: "A",
-                available_question_ids[1]: "C",
-                available_question_ids[2]: "B", 
-            }
 
-        print(f"\nGiả lập input của người dùng: {mock_user_answers}")
+        # --- Test data từ sample_answers.json ---
+        try:
+            with open("sample_answers.json", "r", encoding='utf-8') as f:
+                answer_sets = json.load(f)
+            print("\nDữ liệu câu trả lời mẫu đã được tải thành công.")
 
-        final_scores = model.calculate_scores(mock_user_answers)
-        print(f"\nBảng điểm đã được tính toán: {final_scores}")
+            for answer_set in answer_sets:
+                print("\n--- Xử lý bộ câu trả lời mẫu ---")
+                print(f"Test set {answer_set['set_id']} (style: {answer_set['style']})")
+                user_answers = answer_set["answers"]
 
-        top_3_recommendations = model.get_recommendations(final_scores, top_n=3)
-        
-        print("\n--- KẾT QUẢ GỢI Ý HÀNG ĐẦU ---")
-        for i, rec in enumerate(top_3_recommendations):
-            print(f"{i+1}. {rec['career_name']} (Điểm: {rec['score']})")
-    else:
+                final_scores = model.calculate_scores(user_answers)
+                print(f"Bảng điểm: {final_scores}")
+
+                top_3 = model.get_recommendations(final_scores, top_n=3)
+                print("\n--- KẾT QUẢ GỢI Ý HÀNG ĐẦU ---")
+                for i, rec in enumerate(top_3, 1):
+                    print(f"{i}. {rec['career_name']} (Điểm: {rec['score']})")
+            
+        except FileNotFoundError:
+            print("Lỗi: Không tìm thấy file sample_answers.json. Vui lòng kiểm tra lại.")
+
+    else: 
         print("\nKhông thể chạy mô phỏng do lỗi tải dữ liệu.")
