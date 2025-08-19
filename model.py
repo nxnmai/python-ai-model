@@ -133,7 +133,7 @@ if __name__ == "__main__":
     with open('config.json', 'w', encoding='utf-8') as f:
         json.dump(config_content, f)
 
-    model = CareerQuizModel(config_path='config.json', questions_csv_path='Questions.csv')
+    model = CareerQuizModel(config_path='config.json', questions_csv_path='question.csv')
 
     if model.questions and model.career_profiles:
         print("\nTải dữ liệu thành công!")
