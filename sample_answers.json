@@ -1,0 +1,57 @@
+[
+  {
+    "set_id": 1,
+    "style": "Balanced",
+    "answers": {
+      "Q1": "A",
+      "Q2": "D",
+      "Q3": "B",
+      "Q4": "D",
+      "Q5": "D"
+    }
+  },
+  {
+    "set_id": 2,
+    "style": "AI/ML Engineer",
+    "answers": {
+      "Q1": "D",
+      "Q2": "A",
+      "Q3": "C",
+      "Q4": "C",
+      "Q5": "B"
+    }
+  },
+  {
+    "set_id": 3,
+    "style": "Frontend Developer",
+    "answers": {
+      "Q1": "A",
+      "Q2": "B",
+      "Q3": "D",
+      "Q4": "D",
+      "Q5": "C"
+    }
+  },
+  {
+    "set_id": 4,
+    "style": "Backend Developer",
+    "answers": {
+      "Q1": "B",
+      "Q2": "B",
+      "Q3": "C",
+      "Q4": "A",
+      "Q5": "A"
+    }
+  },
+  {
+    "set_id": 5,
+    "style": "Project Manager/BA/PO",
+    "answers": {
+      "Q1": "A",
+      "Q2": "A",
+      "Q3": "D",
+      "Q4": "D",
+      "Q5": "A"
+    }
+  }
+]
